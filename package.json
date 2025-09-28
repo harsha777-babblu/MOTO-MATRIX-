@@ -1,0 +1,22 @@
+{
+  "name": "moto-matrix-marketplace",
+  "version": "1.0.0",
+  "description": "Two-wheeler marketplace web app for Moto Matrix",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && node seed.js",
+    "start": "node start.js",
+    "setup": "npm run install-all && npm run seed"
+  },
+  "keywords": ["two-wheeler", "marketplace", "bikes", "scooters", "ev"],
+  "author": "Moto Matrix",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
